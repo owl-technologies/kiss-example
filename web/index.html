@@ -39,82 +39,83 @@
                   <ion-card-title>Files</ion-card-title>
                 </ion-card-header>
                 <ion-card-content>
-                  <ion-list>
-                  </ion-list>
+                  <ion-list> </ion-list>
                   <script>
                     var files = [];
                     async function loadFiles() {
-                      const response = await fetch('http://localhost:3000/list');
+                      const response = await fetch("http://localhost:3000/list");
                       files = await response.json();
-                  
-                      const list = document.querySelector('ion-list');
-                      list.innerHTML = ''; // Clear the list
-                  
+
+                      const list = document.querySelector("ion-list");
+                      list.innerHTML = ""; // Clear the list
+
                       files.forEach(file => {
-                        const item = document.createElement('ion-item');
-                        const label = document.createElement('ion-label');
+                        const item = document.createElement("ion-item");
+                        const label = document.createElement("ion-label");
                         label.textContent = file.name;
                         item.appendChild(label);
                         item.onclick = () => selectFile(file);
                         list.appendChild(item);
                       });
+                      if (files.length > 0)
+                        selectFile(files[files.length - 1]);
                     }
                     function selectFile(file) {
-                      const object = document.querySelector('object');
-                      object.data = '/get?cid=' + file.content['/'];
+                      const object = document.querySelector("object");
+                      object.data = "/get?cid=" + file.content["/"];
                     }
                     // Call loadFiles when the page loads
-                    window.addEventListener('DOMContentLoaded', loadFiles);
+                    window.addEventListener("DOMContentLoaded", loadFiles);
+
+                    async function uploadFile(ev) {
+                      console.log("File(s) dropped");
+
+                      // Prevent default behavior (Prevent file from being opened)
+                      ev.preventDefault();
+
+                      let formData = new FormData();
+
+                      if (ev.dataTransfer) {
+                        // Use DataTransferItemList interface to access the file(s)
+                        for (let i = 0; i < ev.dataTransfer.items.length; i++) {
+                          // If dropped items aren't files, reject them
+                          if (ev.dataTransfer.items[i].kind === "file") {
+                            let file = ev.dataTransfer.items[i].getAsFile();
+                            console.log("... file[" + i + "].name = " + file.name);
+                            formData.append("file-upload", file);
+                          }
+                        }
+                      } else {
+                        // Get the file from the file input element
+                        let fileInput = document.getElementById("file-upload");
+                        if (fileInput && fileInput.files && fileInput.files.length > 0) {
+                          let file = fileInput.files[0];
+                          console.log("... file.name = " + file.name);
+                          formData.append("file-upload", file);
+                        } else {
+                          console.log("No file selected");
+                          return;
+                        }
+                      }
+
+                      // Send a POST request to the /add endpoint
+                      const response = await fetch("/add", {
+                        method: "POST",
+                        body: formData,
+                        headers: {
+                          ownerId: "Rosca",
+                          filename: "Secrets of the universe " + (files.length + 1),
+                        },
+                      });
+
+                      const result = await response.json();
+                      console.log(result);
+                      loadFiles();
+                    }
                   </script>
                 </ion-card-content>
               </ion-card>
               <!-- Upload File Drop Region -->
-              <script>
-                async function uploadFile(ev) {
-                  console.log("File(s) dropped");
-
-                  // Prevent default behavior (Prevent file from being opened)
-                  ev.preventDefault();
-
-                  let formData = new FormData();
-
-                  if (ev.dataTransfer) {
-                    // Use DataTransferItemList interface to access the file(s)
-                    for (let i = 0; i < ev.dataTransfer.items.length; i++) {
-                      // If dropped items aren't files, reject them
-                      if (ev.dataTransfer.items[i].kind === "file") {
-                        let file = ev.dataTransfer.items[i].getAsFile();
-                        console.log("... file[" + i + "].name = " + file.name);
-                        formData.append("file-upload", file);
-                      }
-                    }
-                  } else {
-                    // Get the file from the file input element
-                    let fileInput = document.getElementById("file-upload");
-                    if (fileInput && fileInput.files && fileInput.files.length > 0) {
-                      let file = fileInput.files[0];
-                      console.log("... file.name = " + file.name);
-                      formData.append("file-upload", file);
-                    } else {
-                      console.log("No file selected");
-                      return;
-                    }
-                  }
-
-                  // Send a POST request to the /add endpoint
-                  const response = await fetch("/add", {
-                    method: "POST",
-                    body: formData,
-                    headers: {
-                      "ownerId": "Rosca",
-                      "filename": "Secrets of the universe " + (files.length + 1),
-                    },
-                  });
-
-                  const result = await response.json();
-                  console.log(result);
-                }
-              </script>
               <style>
                 #drop-zone {
                   border: 2px dashed blue;
@@ -124,12 +125,14 @@
               </style>
               <form id="upload-form" action="/add" method="post" enctype="multipart/form-data" onsubmit="event.preventDefault(); uploadFile(event);">
                 <ion-card id="drop-zone" ondrop="uploadFile(event);" ondragover="event.preventDefault();">
-                  <ion-card-header>
-                    <ion-card-title>Drop Files Here</ion-card-title>
-                  </ion-card-header>
                   <ion-card-content>
-                    <input type="file" id="file-upload" name="file-upload" accept="application/pdf"></input>
-                    <ion-button expand="full" type="submit" color="primary">Upload</ion-button>
+                    <!-- <input type="file" id="file-upload" name="file-upload" accept="application/pdf"></input> -->
+                    <input type="file" id="file-upload" name="file-upload" accept="application/pdf" onchange="uploadFile(event);" hidden />
+                    <ion-button color="primary" onclick="document.getElementById('file-upload').click();"> Choose File </ion-button>
+                    <!-- <ion-button type="submit" color="primary" disabled="true">Upload</ion-button> -->
+                    <div style="margin-top: 10px; color: gray; font-size: 1.5em; display: block; text-align: center;">
+                      <ion-label>OR DROP FILES HERE</ion-label>
+                    </div>
                   </ion-card-content>
                 </ion-card>
               </form>
