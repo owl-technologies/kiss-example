@@ -37,19 +37,5 @@ export class AddFileController {
         this.heliaService.setFileList(newfileListCid);
         return newfileListCid;
       }
-
-      
-    // async addFile(req : Request) {
-    //     const heliaNode = this.heliaService.heliaNode
-    //     const fs = unixfs(heliaNode)
-    //     assert(req, "Request does not contain file content")
-    //     const fileCid = await fs.addByteStream(<any>req)
-    //     const cidJson = fileCid.toJSON()
-    //     const dir = await this.heliaService.getCurrentDir()
-    //     const newDir = await fs.cp(fileCid,dir,cidJson['/'])
-    //     this.heliaService.setCurrentDir(newDir)
-    //     console.log("added file:", cidJson)
-    //     return cidJson
-    // }
 }
 

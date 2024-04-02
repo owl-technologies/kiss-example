@@ -5,3 +5,4 @@ dist
 leveldb/*
 ```
 src/example/.DS_Store
+.DS_Store
