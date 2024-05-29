@@ -5,9 +5,20 @@ import cors from "cors";
 import { EventEmitter } from 'events';
 import express, { Request, Response } from "express";
 import { KissServer } from "kiss-framework";
-import { tictoc } from "kiss-framework";
 import { config } from "./config.js";
 
+
+export function tictoc(msg = '') {
+  const tic = {start: new Date().getTime(), msg}
+  return {
+      toc: (msg = '') => {
+          const toc = new Date().getTime();
+          const interval = toc - tic.start;
+          console.log(`${interval / 1000.0}s ${tic.msg} ${msg}`);
+          return interval
+      }
+  }
+}
 
 const logger = (req: Request, res: Response, next: Function) => {
   const tic = tictoc()

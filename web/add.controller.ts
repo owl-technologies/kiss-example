@@ -1,9 +1,11 @@
 import { json } from '@helia/json';
 import { unixfs } from '@helia/unixfs';
 import { Request } from 'express';
-import { CURRENT_VERSION, Controller, Post, assert } from "kiss-framework";
+import { Controller, Post, assert } from "kiss-framework";
 import { PdfFile } from '../datatypes/pdf-file.js';
 import { HeliaService } from "../services/helia.service.js";
+import { config } from '../config.js';
+
 
 @Controller
 export class AddFileController {
@@ -23,7 +25,7 @@ export class AddFileController {
 
         const content = await fs.addByteStream(<any>req);
         const pdfFile = new PdfFile({
-            "protocol-version": CURRENT_VERSION,
+            "protocol-version": config.currentVersion,
             name: filename,
             ownerId,
             content: content.toJSON()
