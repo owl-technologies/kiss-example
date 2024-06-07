@@ -1,6 +1,7 @@
 import axios from "axios";
 import { Service } from "kiss-framework";
 import { base64 } from "multiformats/bases/base64";
+import { config } from "../config.js";
 
 type CollectionData = {
     collection_name: string,
@@ -15,7 +16,7 @@ export class OllamaProxyService {
 
     async extractEmailsFromPdf(pdfText): Promise<string[]> {
         // Make a POST request to the Ollama API
-        const response = await axios.post('http://192.168.178.208:11434/api/generate', {
+        const response = await axios.post(`${config.ollamaApiUrl}/api/generate`, {
             model: 'extract-emails',
             prompt: pdfText,
             stream: false,

@@ -1,0 +1,467 @@
+ kiss-framework-example > npm start
+
+> kiss-framework-example@1.0.0 start
+> tsc; node dist/start-server.js
+
+Debugger listening on ws://127.0.0.1:59443/ef16d1bf-6a4e-4a23-ad04-5a92b0e2691d
+For help, see: https://nodejs.org/en/docs/inspector
+Debugger attached.
+KissServer is listening on port 3000!
+Registered - /add:post to AddFileController.addFile()
+Registered - /extract-emails:get to extractEmailsFromPdfController.extractEmails()
+Registered - /get:get to GetFileController.getFile()
+Registered - /index.html:get to IndexHtmlController.getIndex()
+Registered - /list:get to IndexHtmlController.listFiles()
+0.001s  ::1, GET, /index.html, /index.html status: 200
+0.001s  ::1, GET, /list, /list status: 200
+0.001s  ::1, GET, /favicon.ico, /favicon.ico status: 200
+fileCid: { '/': 'bafkreie3nw7ha5dzvad3bygubx57nt3nady7vas2eyvbx7v6gjco5a2t6i' }
+0.007s  ::1, GET, /get?cid=bafkreie3nw7ha5dzvad3bygubx57nt3nady7vas2eyvbx7v6gjco5a2t6i, /get status: 200
+0.002s  ::1, POST, /add, /add status: 200
+0s  ::1, GET, /list, /list status: 200
+fileCid: { '/': 'bafybeigfyahuxmyuklx5bxo6hqacu7p5lgthbkzvh2tbzovzxkhqjb6eii' }
+0.001s  ::1, GET, /get?cid=bafybeigfyahuxmyuklx5bxo6hqacu7p5lgthbkzvh2tbzovzxkhqjb6eii, /get status: 200
+extractEmails. pdf: bafybeigfyahuxmyuklx5bxo6hqacu7p5lgthbkzvh2tbzovzxkhqjb6eii
+pdf is a valid cid
+extractEmails. fs working
+pdfCid: CID(bafybeigfyahuxmyuklx5bxo6hqacu7p5lgthbkzvh2tbzovzxkhqjb6eii)
+0.003s  ::1, GET, /extract-emails?pdf=bafybeigfyahuxmyuklx5bxo6hqacu7p5lgthbkzvh2tbzovzxkhqjb6eii, /extract-emails status: 200
+pdfData length: 1203053
+Warning: TT: undefined function: 32
+pdfInfo: CONVOCATORIA SENL-2024-05 “Fortalecimiento de Cadenas Productivas”   
+El  Gobierno  del  Estado  de  Nuevo  León,  a  través  de  la  Secretaría  de  Economía, con  fundamento  en  los 
+Artículos 14, 15, 18 y 28 fracciones VIII, XI y XXXVIII de la Ley Orgánica de la Administración Pública 
+para el Estado de Nuevo León, Artículo 4, fracciones III y IX de la Ley de Fomento a la Micro, Pequeña y 
+Mediana Empresa para el Estado de Nuevo León, numerales 4.2.2, 4.2.3, 4.2.4 y 4.2.5 del “Acuerdo por el 
+que se emiten las Reglas de Operación de los Programas Presupuestales y Actividades Institucionales para 
+el  Ejercicio  2024 de  la  Secretaría  de  Economía  del  Estado  de  Nuevo  León”, publicado en el Periódico 
+Oficial del Estado de Nuevo León en fecha 9 de febrero de 2024;  y 
+ 
+CONSIDERANDO QUE 
+ Las Micro, Pequeñas y Medianas Empresas juegan un papel primordial en el desarrollo sostenible 
+de  Nuevo León, representando el 99.3% de las  unidades económicas del estado y el 55% de  los 
+empleos formales, teniendo un rol fundamental en el desarrollo regional, en el fortalecimiento de 
+las cadenas productivas locales y en el fomento del ecosistema de innovación; 
+ Es menester fortalecer la innovación empresarial para que Nuevo León siga generando riqueza de 
+manera sostenible, particularmente en un escenario internacional complejo de relocalización de las 
+inversiones,  donde  seguirán  persistiendo  problemas  en  las  cadenas  de  suministro  y  de  valor 
+globales; 
+ El  Plan  Estatal  de  Desarrollo  2022-2027  tiene  como  objetivo promover  la  competitividad, 
+rentabilidad y sostenibilidad de las MIPyMES para fortalecer el empleo y la generación de riqueza; 
+para lo cual una de las líneas de acción es “Impulsar la integración de las MIPyMES en las cadenas 
+productivas del estado”;  
+ La Ley de Fomento a la Micro, Pequeña y Mediana Empresa para el Estado de Nuevo León señala 
+que la política para las MIPYMES deberá promover y garantizar las condiciones para la creación, 
+consolidación e integración de las MIPYMES en las cadenas globales de valor; 
+ De  acuerdo  a  la Ley  Orgánica  de  Administración  Pública  para  el  Estado  de  Nuevo  León,  la 
+Secretaría  de  Economía  es  la  dependencia  encargada  de  establecer  e  instrumentar  las  políticas, 
+estrategias,  acciones  y  programas  en  términos  de  sostenibilidad  y  eficacia  que  promuevan  el 
+desarrollo económico, energético, de comercio exterior y en economía digital; correspondiéndole 
+fortalecer  la  cadena  de  suministro  de  las  empresas  y  sectores  estratégicos,  incentivando  a  los 
+proveedores locales;  
+
+ 
+ 
+ Para   el   cumplimiento de   estos   objetivos   cuenta   con   el   Programa   Presupuestal   S261 
+“Fortalecimiento  de  sectores  estratégicos  y  cadenas  productivas”,  mismo  que  está  incluido  con 
+suficiencia presupuestal en la Ley de Egresos del Estado de Nuevo León para el Ejercicio Fiscal 
+2023, aplicable  para  el  Ejercicio  Fiscal  2024,  de  conformidad  con  el  Decreto  Ejecutivo  2-2024 
+“Reconducción. Ley de Egresos para el Estado de Nuevo León 2024”, publicado en el Periódico 
+Oficial del Estado de Nuevo León en fecha 1 de enero de 2024;  
+ 
+INVITA 
+A las asociaciones,  cámaras,  confederaciones  empresariales,  sindicatos  patronales  y  agrupamientos 
+empresariales  estratégicos  (CLUSTERS)
+1
+,  a  proponer  proyectos que  contribuyan  a  incrementar  la 
+integración  de pequeñas  y  medianas  empresas  (PYMES),  radicadas  en  el Estado  de  Nuevo  León,  a  las 
+cadenas productivas por medio de la producción local que sustituya importaciones de bienes y servicios, en 
+términos de las siguientes 
+ 
+BASES DE OPERACIÓN 
+I. Objetivo 
+Promover  el  desarrollo  económico  en  el  Estado  de  Nuevo  León mediante el apoyo a proyectos que 
+contribuyan  a  incrementar  la  integración  de pequeñas  y  medianas  empresas  (PYMES),  radicadas  en  el 
+Estado  de  Nuevo  León,  a  las  cadenas  productivas  por  medio  de  la  producción  local  que  sustituya 
+importaciones de bienes y servicios.  
+ 
+II. Condiciones del apoyo 
+a. Descripción del apoyo 
+Los proyectos que sean seleccionados recibirán un apoyo económico por hasta el 50% del costo total del 
+proyecto y hasta por la cantidad máxima de $5,000,000.00 (cinco millones de pesos 00/100 M.N.) para el 
+desarrollo e implementación del proyecto presentado. 
+                                                           
+1
+ Definidos y reconocidos en términos del Artículo 4 de la Ley de Fomento a la Inversión y al Empleo para el Estado 
+de Nuevo León. 
+
+ 
+ 
+b. Restricciones del apoyo 
+El  apoyo  económico  de  la  Secretaría  de  Economía se  realizará  cumpliendo  con  los  procedimientos  que 
+correspondan, en estricto apego a la normatividad aplicable y mediante la suscripción de un convenio de 
+asignación de recursos en el que se establezcan los términos y condiciones para la aplicación del apoyo, 
+sujeto a las siguientes restricciones:  
+ Sólo podrá destinarse a objetivos que tengan como fin último el fortalecimiento tecnológico o de 
+procesos productivos, como adquisición de hardware, software, maquinaria y/o equipo productivo 
+relacionado con los procesos  productivos,  así como la  gestión, estandarización o medición de la 
+calidad.; 
+ No son elegibles de apoyo ningún gasto relacionado con:  
+a) Adquisición de vehículos y todos aquellos equipos y maquinaria cuyo propósito no sean 
+actividades de producción y/o distribución, 
+b) Adquisición de bienes inmuebles y proyectos de obra civil, 
+c) Salarios, nóminas y pagos por prestaciones laborales,  
+d) Pagos  de  derechos  o  impuestos,  tales  como  tenencia  o  verificación  vehicular,  con 
+excepción del Impuesto al Valor Agregado (IVA) que corresponda; 
+ Los recursos se transferirán a una cuenta específica que no genere intereses ni rendimientos, donde 
+se  vean  reflejados,  en  su  totalidad,  los  gastos  del  proyecto,  administrada  por  el  Organismo 
+Intermedio, mismo que emitirá la factura o recibo que corresponda de acuerdo a su régimen fiscal. 
+De igual manera, el o los beneficiarios deberán destinar una cuenta específica; 
+ El  monto  autorizado  será  global,  considerando  todos  los  impuestos  y  tasas  que  correspondan, 
+incluyendo el IVA. En ninguna circunstancia el monto transferido o el del recibo o comprobante 
+fiscal que ampare dicha transferencia podrá ser mayor al monto autorizado; 
+ La  concurrencia  deberá  ser  en  aportación  líquida  y  deberá  realizarse  de  manera  previa  a  la 
+aportación de la Secretaría, a la cuenta del beneficiario específica del proyecto;  
+ No  serán  reconocidas  aportaciones  en  especie  ni  gastos  previos  a  la  fecha  de  formalización  del 
+convenio correspondiente; 
+ Tanto  las  empresas  tractoras,  como  las  empresas  beneficiarias  deberán  de  estar  ubicadas  en  el 
+Estado  de  Nuevo  León,  las  PYMES deberá  contar con  al  menos 5  años  de  operación  y  no  estar 
+participando en algún proyecto o encontrarse en incumplimiento de algún programa estatal  y estar 
+al corriente de sus obligaciones fiscales.  
+ 
+ 
+ 
+
+ 
+ 
+III. Registro 
+Las asociaciones,   cámaras,   confederaciones   empresariales,   sindicatos   patronales   y   agrupamientos 
+empresariales estratégicos (CLUSTERS)
+2
+ interesadas, y que cumplan con los requisitos establecidos en la 
+sección V de la presente convocatoria deberán presentar su proyecto, de manera electrónica, debidamente 
+firmado, a la siguiente dirección de correo electrónico:  
+clusters@nuevoleon.gob.mx 
+Sólo  se aceptarán  para  evaluación toda  solicitud  debidamente  formulada  y  enviada  al  sitio,  dentro  de  la 
+vigencia  de  la  Convocatoria,  siempre  y  cuando  cumpla  con  los  requisitos  establecidos,  acompañando  la 
+documentación correspondiente en formato electrónico.  
+En ningún caso serán admisibles solicitudes presentadas por otro medio, incompletas o extemporáneas. La 
+Secretaría, antes de la fecha de cierre de la convocatoria, podrá entrar en contacto con los solicitantes para 
+prevenir la falta de documentación o aclarar información. En su caso, las prevenciones deberán atenderse 
+en un plazo no mayor a 3 días hábiles. 
+ 
+IV. Calendario 
+El calendario para llevar a cabo la implementación de las actividades materia de la presente, se desarrollará 
+conforme a las siguientes fechas: 
+Actividad Fecha 
+Publicación de la Convocatoria 
+15 de Marzo del 2024 
+Presentación de Proyectos 
+Del 03 de Junio al 02 de Agosto del 2024  
+Evaluación de Proyectos 
+Del 05 de Agosto al 01 de Octubre del 2024 
+Publicación de resultados  
+23 de Octubre del 2024 
+Formalización y Firma de Convenio  
+Del 23 de Octubre al 23 de Noviembre del 2024 
+Ejecución del Proyecto 
+A partir del 01 de Enero del 2025 de acuerdo al calendario 
+establecido en el proyecto, con un plazo no mayor a 12 meses 
+ 
+V. Población Objetivo y Requisitos  
+Podrán participar todas las micro, pequeñas y medianas empresas constituidas formalmente como personas 
+morales en el Estado de Nuevo León,  que se encuentren al corriente de sus obligaciones fiscales, por medio 
+                                                           
+2
+ Definidos y reconocidos en términos del Artículo 4 de la Ley de Fomento a la Inversión y al Empleo para el Estado 
+de Nuevo León. 
+
+ 
+ 
+de  las  asociaciones,  cámaras,  confederaciones empresariales,  sindicatos  patronales y  agrupamientos 
+empresariales estratégicos (CLUSTERS)
+3
+ que fungirá como Organismo Intermedio y con el apoyo de una 
+empresa mediana o grande importadora (Tractora) que sustituirá las importaciones de bienes o servicios.  
+Estratificación de PYMES 
+ 
+Para considerarse como presentadas, es requisito que las propuestas de proyectos elaboren y entreguen los 
+siguientes documentos:  
+1) Documento técnico, en formato libre, incluyendo, al menos, las siguientes secciones:  
+a) Antecedentes  o  contexto,  identificando  el  área  de  oportunidad  o  la  problemática  de  la 
+tractora que se desea atender, así como su motivación; 
+b) Descripción o alcance del proyecto;  
+c) Empresas involucradas, detallando número de MIPyMES beneficiarias que participarán o 
+se  integrarán  a  la  cadena  productiva  Estatal,  segmentadas  por  tamaño,  así  como  la/s 
+empresa/s tractoras y el sector productivo;  
+d) Metodología,    actividades    por    desarrollar    y    plazos    de    ejecución    debidamente 
+calendarizados; (Tomar en cuenta a partir de Enero del 2025 para su calendarización). 
+e) En  su  caso,  equipo  de  trabajo  o  proveedores  externos  necesarios  para  el  proyecto; 
+(especificando las actividades a realizar por orden cronológico) 
+f) Impacto  económico,  social  y  ambiental,  especificando  y  cuantificando los  bienes  o 
+servicios   que   la   tractora   actualmente   importa,   el   efecto   esperado   sobre   dichas 
+importaciones, el plazo estimado para la sustitución de importaciones, empleos a generar, 
+así como su grado de innovación;  
+g) Entregables, evidencias o productos que se generarán;  
+                                                           
+3
+ Definidos y reconocidos en términos del Artículo 4 de la Ley de Fomento a la Inversión y al Empleo para el Estado 
+de Nuevo León. 
+
+ 
+ 
+h) Nombre, datos de contacto y firma del responsable de la propuesta o de su representante 
+legal.  
+2) Desglose económico,  señalando  el costo total del proyecto, fuentes de  financiamiento y flujo de 
+efectivo,  en  hoja  de  cálculo  que  permita  la  visualización,  revisión  y  validación  de  fórmulas  y 
+métodos de cálculo. (En caso de contar con una cotización en dólares, adjuntar el tipo de cambio) 
+3) Carta compromiso de la asociación, cámara, confederación empresarial, sindicato patronal o clúster 
+que realice la propuesta, firmada por el proponente o su representante legal, donde valide su apoyo 
+a la propuesta y que fungirá como organismo intermedio para la administración y control de los 
+recursos.  
+4) Carta   de   Intención   de   compras   de   la/s   empresa/s   tractoras   participantes   en   el   proyecto, 
+especificando las condiciones a cumplir por parte de las  MIPYMES para sustituir importaciones. 
+Así  mismo,  el  monto  de  importación  a  sustituir  mediante  la  integración  de  las  MIPyMES 
+beneficiarias  a  su  cadena  de  valor,  firmada  por su  Representante  Legal,  indicando  sus  datos  de 
+contacto. 
+ 
+VI. Evaluación y Selección 
+Al   término   del   período  de   recepción   de   propuestas   y   finalizadas,  en  su  caso,   las  prevenciones 
+correspondientes, la Secretaría integrará todas las propuestas de proyectos que se hayan cumplimentado en 
+tiempo y forma conforme a lo establecido en el apartado V a efecto de iniciar el proceso de evaluación de 
+proyectos.  
+La Dirección de Clusters será el área responsable de coordinar y dar seguimiento al proceso de evaluación 
+de  las  propuestas. De  existir  dudas  respecto  a  las  propuestas,  la  Dirección  de  Clusters  podrá  entrar  en 
+contacto con los proponentes para clarificar todos aquellos aspectos de la propuesta que los lleve a tener 
+elementos para sustentar mejor sus recomendaciones.  
+Todas las propuestas de proyectos que hayan cumplimentado en tiempo y forma con lo establecido y sean 
+factibles,  serán sometidas  a  la  evaluación  técnica  de  fondo por  un  grupo  de  expertos  académicos  de 
+reconocida  trayectoria  y  experiencia  en  desarrollo  económico,  a  efecto  de  determinar  la  congruencia, 
+factibilidad técnica, coherencia y congruencia interna y sostenibilidad de la propuesta.  
+Dicha evaluación se realizará conforme al siguiente procedimiento:  
+1) El Grupo de Expertos recibirá de la Secretaría para su evaluación, únicamente los proyectos que 
+cumplan con los requisitos señalados en el punto V de la convocatoria. Aquellos que no cumplan 
+con los requisitos o no hayan sido presentados en tiempo y forma no serán evaluados. 
+
+ 
+ 
+2) En los casos que se requiera, el Grupo de Expertos por medio de la Dirección de Clusters, podrá 
+solicitar, como parte del proceso de evaluación, reuniones y/o visitas a las instalaciones de alguna 
+de las empresas participantes.  
+En ningún caso  esta  actividad implicará la  incorporación de  nueva  información a  las propuestas 
+presentadas o modificación de la existente y tendrá como único propósito precisar el contenido de 
+dichas propuestas y la capacidad instalada de las empresas. 
+3) Para analizar su viabilidad, los documentos técnico y económico serán evaluados cualitativamente 
+en términos de: 
+a. Congruencia.    Se  refiere  a  que  el  objetivo  del  proyecto  va  de  acuerdo  al  objetivo  del 
+programa. 
+b. Factibilidad   Técnica.   Se   refiere   a   los   recursos   necesarios   como   herramientas, 
+conocimientos,  habilidades,  experiencia,  etc.,  que  son  necesarios  para  efectuar  las 
+actividades o procesos que requiere el proyecto. 
+c. Coherencia  y  Congruencia  Interna.  Se  refiere  que  las  actividades  son  suficientes  y 
+necesarias para el cumplimiento de las metas descritas en el proyecto, dentro de los plazos 
+programados. 
+d. Factibilidad Económica. Se refiere a que se cuenta con los recursos necesarios para llevar 
+a cabo las actividades descritas en el proyecto. 
+e. Sostenibilidad (capacidad de mantener el proyecto en el mediano y largo plazo). 
+ 
+4) Todos  los  proyectos  que  superen  los  requisitos  mínimos  cualitativos  que  hagan  viable  su 
+implementación, pasarán a la fase de análisis de impactos tangibles: 
+a. Impacto económico. Monto anualizado de importaciones sustituidas en moneda nacional. 
+b. Impacto social. Cantidad de MIPYMES beneficiarias y empleos generados. 
+c. Impacto ambiental. Beneficios ambientales derivados de la ejecución  del proyecto. 
+ 
+5) Con  base  en  los  puntos  anteriores,  se  ordenarán  los  proyectos  que  presenten  mayor  impacto  y 
+viabilidad.  En  caso  de  empate,  se  priorizarán  los  proyectos  que  tengan  un  mayor  grado  de 
+innovación. 
+Una  vez  evaluadas  todas  las  propuestas,  aquellas  que  hayan  cumplido  los  requisitos  determinados  en  la 
+presente, serán apoyadas estrictamente en orden de prelación, de acuerdo a la evaluación, hasta agotar la 
+suficiencia presupuestal. 
+ 
+
+ 
+ 
+VII. Publicación de Resultados  
+Una vez que se evalúen y dictaminen las propuestas, conforme al Calendario, la relación de los proyectos 
+seleccionados será   publicada en   la   página   electrónica   oficial   de   la   Secretaría   de   Economía: 
+https://www.nl.gob.mx/economia. 
+ 
+VIII. Obligaciones y compromisos de los sujetos apoyados  
+ El  apoyo  recibido  se  realizará  contra  el  comprobante  fiscal  que  compruebe  la  transferencia  del 
+recurso;  
+ El   Organismo   Intermedio   será   responsable   de   coordinar   las   actividades   entre   las   partes 
+involucradas en el proyecto y de administrar los recursos, con eficiencia, eficacia y honradez, en 
+los términos en los que se establezca el convenio; 
+ La/s empresa/s tractoras y el Organismo Intermedio deberán coadyuvar y facilitar la ejecución del 
+proyecto y de los entregables, en la medida de su participación en el mismo;   
+ Todos los participantes en los proyectos (Organismo Intermedio y empresas) deberán permitir, en 
+su caso, todas las acciones de auditoría, revisión y seguimiento de los proyectos, así como cumplir 
+en  general,  durante  toda  la  vida  del proyecto,  con  los  términos  y  condiciones  establecidos  en  la 
+presente y en el convenio de colaboración que se firme a tal fin;  
+ Informar, a la mayor brevedad posible, de todos los desvíos que identifiquen en el desarrollo de las 
+actividades, así como los casos de fuerza mayor que impidan la conclusión del mismo;  
+ Firmar el convenio de colaboración correspondiente;  
+ Reintegrar al Gobierno del Estado los recursos no utilizados para los fines del proyecto, más los 
+recargos y actualizaciones correspondientes. 
+ Independientemente  de  los  entregables  comprometidos  en  la  propuesta,  cada  proyecto  apoyado 
+deberá generar y entregar los siguientes productos:  
+o Informe final de la ejecución del proyecto que contenga los resultados obtenidos, en hoja 
+con membrete firmada por su representante legal;  
+o Padrón   de   beneficiarios del   proyecto   (MIPYMES   apoyadas),   anexando   una   carta 
+vinculante de haber recibido el beneficio gubernamental. Deberán de establecer las ventas 
+
+ 
+ 
+y empleos creados la cual deberá de estar firmada por su representante legal, anexando su 
+poder e identificación. Además de anexas la constancia de situación fiscal con domicilio 
+en  Nuevo  León.  Los  beneficiarios  deberán  de  anexar  la  opinión  de  cumplimiento  de 
+obligaciones fiscales emitido por el SAT; 
+o Evidencia de los bienes y servicios adquiridos, tales como constancia de las certificaciones 
+(sean de gestión, calidad o de capacitaciones) y facturas de los equipos y bienes adquiridos; 
+o Reporte del uso y destino de los recursos financieros asociados al proyecto; 
+ 
+IX. Revisiones y auditorías 
+Los órganos competentes, en el ejercicio de sus atribuciones, llevarán a cabo la fiscalización y verificación 
+de  los  proyectos  aprobados en  sus  respectivos  ámbitos  de competencia,  y su ejercicio estará sujeto a las 
+disposiciones aplicables vigentes en materia de contraloría.  
+Sin perjuicio de lo anterior, la Secretaría de Economía podrá en todo momento revisar la documentación 
+que  requiera o realizar visitas de  verificación para  evaluar la  ejecución de  los  proyectos,  las inversiones 
+efectuadas y/o el avance de los mismos.  
+La Secretaría, a través de las instancias que considere pertinentes, se reserva el derecho de aplicar revisiones 
+técnicas y/o auditorías contables durante la ejecución del proyecto, sin requerir por ello de la autorización 
+explícita del o los beneficiarios.  
+ 
+X. Principios rectores 
+ Confidencialidad y Manejo de la Información  
+La información que se reciba con motivo de la presente Convocatoria estará sujeta a lo dispuesto por la Ley 
+General  de  Transparencia  y  Acceso  a  la  Información  Pública,  la  Ley  de  Transparencia  y  Acceso  a  la 
+Información  Pública  del  Estado  de  Nuevo  León  y  la Ley  General  de Protección  de Datos  Personales en 
+Posesión  de  Sujetos  Obligados  y  la  Ley  de  Protección  de  Datos  Personales  en  Posesión  de  Sujetos 
+Obligados del Estado de Nuevo León. 
+ En  aquellos  casos  en  que  el  proponente  entregue  información  confidencial, reservada  o  comercial 
+reservada, deberá manifestarse dicho carácter por escrito, en donde se deberá identificar los documentos o 
+las secciones de éstos que contengan información sensible, incluyendo el motivo por el que consideran que 
+tiene  ese  carácter.  Ello  con  independencia  de  la  clasificación  de  los  datos  personales  en  términos  de  la 
+citadas Leyes, como información confidencial. 
+
+ 
+ 
+La incorporación de información sensible o confidencial, y las consecuencias de su posible exposición a 
+terceros será responsabilidad exclusiva del proponente, en caso de que este no emita la especificación de 
+información sensible o confidencial. 
+Las  personas  que  tengan  bajo  su  custodia  o  tramitación,  información  confidencial,  estarán  obligados  a 
+mantenerla con esa calidad. Quienes incumplan con esta disposición serán sancionados de conformidad con 
+lo  dispuesto  en  la  normatividad  aplicable.  La  Secretaría  de  Economía  establecerá  los  mecanismos 
+necesarios  para  asegurar  la  confidencialidad  de  la  información  contenida  en  las  propuestas  presentadas, 
+tanto en la fase de recepción y evaluación como de seguimiento. 
+ Eficiencia y equidad 
+La selección de los beneficiarios y de los proyectos apoyados por la Secretaría de Economía se realizará 
+mediante  procedimientos  competitivos,  eficientes,  equitativos,  transparentes  y  públicos,  sustentados  en 
+méritos y calidad. 
+La Secretaría se obliga a no discriminar a los/las proponentes por motivos de origen étnico o nacional, el 
+género, la edad, las discapacidades, la condición social, las condiciones de salud, la religión, las opiniones, 
+las preferencias sexuales, el estado civil o cualquier otra que atente contra la dignidad humana y tenga por 
+objeto  anular  o  menoscabar  los  derechos  y  libertades  de  las  personas. Los  servidores  públicos  de  la 
+Administración  Pública  Estatal  tienen  la  obligación  de  administrar  los  recursos  económicos  de  que 
+dispongan  con  transparencia,  eficiencia,  eficacia,  economía  y honradez, satisfaciendo los  objetivos  a  los 
+que  estén  destinados.  De  igual  forma,  los  sujetos  apoyados  o  beneficiarios  deberán  observar  dichos 
+principios,  administrando  los  apoyos  que  le  son  otorgados  para  el  debido  cumplimiento  de  los  fines  y 
+productos esperados planteados en los proyectos.  
+ Propiedad Intelectual  
+La participación en la presente convocatoria y/o la proposición de proyectos que involucren derechos de 
+propiedad intelectual, en ningún caso y bajo ninguna circunstancia será considerado como una cesión de 
+los mismos y dichos derechos serán de la persona física o moral a quien corresponda. Será responsabilidad 
+de los proponentes garantizar en todo momento el respeto de dichos derechos de propiedad intelectual.  
+La  propiedad  intelectual  derivada  de  los  proyectos  será  de  los  beneficiarios  a  quien  por  derecho 
+corresponda, en términos de la Ley Federal de Protección a la Propiedad Intelectual. 
+ Protección del Medio Ambiente 
+El  sujeto  apoyado  y/o  los  beneficiarios,  en  la  ejecución  de  su  proyecto,  se  obligan  a  respetar  las 
+disposiciones  que  se  refieran  a  la  preservación  y  restauración  del  equilibrio  ecológico, así  como  la 
+protección  al  ambiente.  Es  obligación  de  los  proponentes  contar  u  obtener  de  la  autoridad  competente 
+
+ 
+ 
+cualquier  permiso,  concesión  o  requisito  referente  a  las  materias  mencionadas  previo  a  la  ejecución  del 
+proyecto. 
+Se  dará  preferencia  en  la  selección  de  los  proyectos  a  aquellos/as  proponentes  que,  en  igualdad  de 
+circunstancias,   lleven   a   cabo   los   procesos   de   certificación   ambiental   voluntaria   y   muestren   una 
+responsabilidad social con el medio ambiente y la sociedad, de conformidad con lo que establecen las leyes 
+aplicables en la materia. 
+ 
+XI. Sanciones  
+Cualquier incumplimiento de  las obligaciones, condiciones y principios rectores previstos en la presente 
+convocatoria  será  motivo  de  cancelación  del  apoyo,  sin  menoscabo  de  las  sanciones  administrativas  o 
+legales que correspondan.  
+ 
+XII. Interpretación y situaciones no previstas 
+La interpretación del contenido del presente Acuerdo, así como las situaciones no previstas en ésta, serán 
+resueltas por la Secretaría de Economía, a través de las áreas competentes correspondientes, con base en 
+las  atribuciones  contempladas  en  los  distintos  instrumentos  jurídicos  aplicables.  Las  decisiones  de  la 
+Secretaría serán definitivas. 
+ 
+XIII. Quejas, aclaraciones y mayor información  
+La  presente  es  gestionada  por  la  Dirección  de  Clusters,  adscrita  a  la  Subsecretaría  de  Inversión.  Para 
+cualquier  aclaración  o  información  adicional  sobre  la  presente  convocatoria,  los  interesados  pueden 
+dirigirse con las siguientes personas: 
+ 
+Diana Patricia Vidal García   Abril Alejandra Guerra Valenciano Sebastián Alejandro Solís Zapiain 
+Director de Clusters Coordinadora de Clusters Coordinador de Clusters 
+81-2033-3248 81-2033-3152 81-2033-3235 
+diana.vidal@nuevoleon.gob.mx  abril.guerra@nuevoleon.gob.mx  sebastian.solis@nuevoleon.gob.mx  
+ 
+Torre Administrativa, GENL 
+Washington #2000, Colonia Obrera, Piso 13 
+CP 64010, Monterrey, N.L. 
+ 
+
+ 
+ 
+ 
+En  caso  de  quejas,  inconformidades  o  denuncias  derivadas  de  la  ejecución  del  presente  Acuerdo los 
+proponentes, y el público en general, podrán presentarlas en la Contraloría y Transparencia Gubernamental 
+del Estado de Nuevo León, ubicada en Torre Administrativa | Piso 21, Calle Washington 2000 Oriente Col. 
+Obrera, Monterrey, Nuevo León, CP 64010, de Lunes a Viernes, en un horario de 8:00 a 14:00 horas y 15:00 
+a 17:00 horas. 
+ 
+ 
+Emitida en la Ciudad de Monterrey, Nuevo León, a los 15 días del mes de marzo de 2024. 
+ 
+ 
+ 
+El Secretario de Economía del Estado de Nuevo León 
+ 
+ 
+ 
+ 
+Mtro. IVAN RIVAS RODRIGUEZ
+response.data: {
+  model: 'extract-emails',
+  created_at: '2024-06-07T08:07:17.528036393Z',
+  response: 'Here are the emails extracted in JSON format as a string array:\n' +
+    '\n' +
+    '["diana.vidal@nuevoleon.gob.mx", "april.guerra@nuevleon.gob.mx", "sebastian.solis@nuevoleon.gob.mx"]',
+  done: true,
+  done_reason: 'stop',
+  context: [
+    128006,   9125, 128007,  1432,   2675,   527,   459,  2613,
+     68572,     13,  23673, 14633,     11, 10052,  1193,   449,
+     14633,    304,   3024,  3645,    439,   264,   925,  1358,
+        13,  18321,    449, 10277,    422,   499,  1550,   539,
+      1505,    904,  14633,    13,   1789,  1855,  2613,   430,
+       499,   1505,    499,   690,    636,   264, 39953, 12829,
+       627, 128009, 128006,   882, 128007,   271,  5910,    53,
+      7767,  12121,   5987, 85907,     43,    12,  2366,    19,
+        12,   2304,   1054, 34380,   1604, 67137,   409,   356,
+     21825,    300,   5761, 39924,    863,  5996,  6719,   220,
+     85172,    220,   1624,   220,  41274,   220,   409,   220,
+     88858,    220,   2009,  3244,     11,   220,   264,   220,
+     50452,    220,    409,   220,
+    ... 7734 more items
+  ],
+  total_duration: 104874634123,
+  load_duration: 41910292648,
+  prompt_eval_count: 1707,
+  prompt_eval_duration: 43083505000,
+  eval_count: 55,
+  eval_duration: 19833363000
+}
